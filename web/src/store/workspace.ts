@@ -8,6 +8,7 @@ import {
   WorkspaceSetting,
 } from "@/types/proto/api/v1/workspace_service";
 import { isValidateLocale } from "@/utils/i18n";
+import { VALID_THEMES } from "@/utils/theme";
 import { workspaceSettingNamePrefix } from "./common";
 
 class LocalState {
@@ -42,7 +43,7 @@ class LocalState {
     if (!isValidateLocale(finalState.locale)) {
       finalState.locale = "en";
     }
-    if (!["default", "default-dark", "paper", "whitewall"].includes(finalState.theme)) {
+    if (!VALID_THEMES.includes(finalState.theme as (typeof VALID_THEMES)[number])) {
       finalState.theme = "default";
     }
     Object.assign(this, finalState);

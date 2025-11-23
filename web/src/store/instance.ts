@@ -22,7 +22,40 @@ import { createRequestKey } from "./store-utils";
 /**
  * Valid theme options
  */
-const VALID_THEMES = ["system", "default", "default-dark", "paper", "whitewall"] as const;
+const VALID_THEMES = [
+  "system",
+  "default",
+  "default-dark",
+  "paper",
+  "whitewall",
+  "shades-of-purple",
+  "dracula",
+  "fallout",
+  "synthwave-84",
+  "cyberpunk",
+  "cobalt",
+  "material",
+  "atom",
+  "ayu-dark",
+  "monokai-classic",
+  "corporate",
+  "retro",
+  "spring",
+  "summer",
+  "autumn",
+  "winter",
+  "valentine",
+  "halloween",
+  "night-owl",
+  "forest",
+  "aqua",
+  "lofi",
+  "pastel",
+  "luxury",
+  "wireframe",
+  "business",
+  "lemonade",
+] as const;
 export type Theme = (typeof VALID_THEMES)[number];
 
 /**
